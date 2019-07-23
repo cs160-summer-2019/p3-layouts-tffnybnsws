@@ -5,16 +5,76 @@
 <html>
 	<head>
 		<title></title>
-
-		<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="{% static '/vendors/bootstrap/css/bootstrap.css' %}" />
-		<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" />
-
 		<script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
 		<script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
 	</head>
+  <style>
+    .flex-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-grid .col {
+  flex: 3;
+}
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-grid-thirds .col {
+  width: 20%;
+}
+
+@media (max-width: 400px) {
+  .flex-grid,
+  .flex-grid-thirds {
+    display: block;
+    .col {
+      width: 100%;
+      margin: 0 0 10px 0;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 20px;
+}
+.flex-grid { 
+  margin: 0 0 20px 0;
+}
+.col {
+  background: tomato;
+  padding: 70px;
+}
+  </style>
 	<body>
-		<!-- Your layout here -->
+		
+<div class="flex-grid">
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+</div>
+
+<div class="flex-grid">
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+</div>
+
+<div class="flex-grid">
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+</div>
 
 	</body>
 </html>
